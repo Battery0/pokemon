@@ -14,9 +14,12 @@ class Pokemon {
   }
 
   returnTypes() {
-    this.types.forEach(element => {
-      element
-    });
+    console.log(this.types);
+    // this.types.forEach(element => {
+    //   coneole.log(element);
+    // });
+
+
   }
 
 }

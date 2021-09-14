@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch(pokemonUrl)
       .then(response => {
-        //console.log(response.status);
         return response.json()
       })
       .then(data => {
@@ -24,16 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         //pokemon.types.push(element.type.name)
         //console.log(pokemon.types);
       })
+
+      pokemon.returnTypes();
+
     })
 
-    const h1 = document.createElement('h1')
-    const h3 = document.createElement('h3')
-
-    h1.innerText = pokemon.returnName()
-    document.querySelector('body').appendChild(h1)
-
-    h3.innerText = pokemon.returnTypes()
-    document.querySelector('body').appendChild(h3)
   })
-
+  
 })
