@@ -14,12 +14,7 @@ class Pokemon {
   }
 
   returnTypes() {
-    console.log(this.types);
-    // this.types.forEach(element => {
-    //   coneole.log(element);
-    // });
-
-
+    return this.types;
   }
 
 }

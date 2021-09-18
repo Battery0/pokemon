@@ -15,17 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json()
       })
       .then(data => {
-        //console.log(data.types);
         data.types.forEach((element) => {
-          //console.log(element.type.name); //strings
           pokemon.setTypes(element.type.name);
-          //console.log(pokemon.setTypes());
-        //pokemon.types.push(element.type.name)
-        //console.log(pokemon.types);
-      })
+        })
+      //console.log(pokemon.returnTypes()); //returns array of pokemon types
 
-      pokemon.returnTypes();
-
+      pokemon.returnTypes().forEach(element => {
+        const h2 = document.createElement('h2')
+        h2.innerText = element
+        document.querySelector('body').appendChild(h2)
+      });
     })
 
   })
